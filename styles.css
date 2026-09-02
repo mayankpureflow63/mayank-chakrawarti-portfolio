@@ -1,0 +1,344 @@
+/* ==========================================================================
+   MAYANK CHAKRAWARTI - EXECUTIVE HR & TALENT ACQUISITION PORTFOLIO
+   Theme: 2026 Light Dashboard SaaS Aesthetic with Dark Presentation Contrast
+   ========================================================================== */
+
+:root {
+  --primary-purple: #6D3FD1;
+  --vibrant-purple: #7C4DDB;
+  --soft-lavender: #A78BFA;
+  --light-purple: #C4B5FD;
+  --dark-navy: #151B2E;
+  --dark-charcoal: #252B3A;
+  --secondary-grey: #596174;
+  --light-grey: #9CA3AF;
+  --bg-soft-white: #F8F8FC;
+  --bg-lavender: #F3F0FF;
+  --card-dark: #111625;
+  --gradient-purple: linear-gradient(135deg, #6D3FD1 0%, #9B6CFF 100%);
+  --glow-purple: 0 10px 30px -5px rgba(109, 63, 209, 0.3);
+  --font-main: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-main);
+  background-color: var(--bg-soft-white);
+  color: var(--dark-navy);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: #F8F8FC;
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #F3F0FF;
+}
+::-webkit-scrollbar-thumb {
+  background: #C4B5FD;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7C4DDB;
+}
+
+/* Purple Gradient Text */
+.gradient-purple-text {
+  background: linear-gradient(135deg, #6D3FD1 0%, #9B6CFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism Header */
+.header-glass {
+  background: rgba(248, 248, 252, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(229, 222, 255, 0.85);
+}
+
+/* Primary Purple Button */
+.btn-purple-primary {
+  background: linear-gradient(135deg, #6D3FD1 0%, #9B6CFF 100%);
+  color: #FFFFFF;
+  box-shadow: 0 3px 14px rgba(109, 63, 209, 0.28);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-purple-primary:hover {
+  background: linear-gradient(135deg, #5B2FBE 0%, #8E5CFA 100%);
+  box-shadow: 0 6px 20px rgba(109, 63, 209, 0.4);
+  transform: translateY(-1.5px);
+}
+
+.btn-purple-primary:active {
+  transform: scale(0.98);
+}
+
+/* Dark Navy Secondary Button */
+.btn-dark-navy {
+  background: #111625;
+  color: #FFFFFF;
+  box-shadow: 0 3px 12px rgba(17, 22, 37, 0.15);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-dark-navy:hover {
+  background: #1C2337;
+  transform: translateY(-1.5px);
+  box-shadow: 0 5px 16px rgba(17, 22, 37, 0.25);
+}
+
+.btn-dark-navy:active {
+  transform: scale(0.98);
+}
+
+/* Soft White Outline Button */
+.btn-soft-outline {
+  background: #FFFFFF;
+  color: #151B2E;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-soft-outline:hover {
+  background: #F8FAFC;
+  border-color: #A78BFA;
+  color: #6D3FD1;
+  transform: translateY(-1.5px);
+  box-shadow: 0 5px 14px rgba(109, 63, 209, 0.12);
+}
+
+.btn-soft-outline:active {
+  transform: scale(0.98);
+}
+
+/* Ambient Radial Glows */
+.ambient-glow-purple {
+  position: absolute;
+  top: 4%;
+  right: 4%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(196, 181, 253, 0.28) 0%, rgba(243, 240, 255, 0) 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ambient-glow-center {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(221, 214, 254, 0.22) 0%, rgba(248, 248, 252, 0) 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Single Dark Information Profile Card */
+.dark-info-card {
+  background: #111625;
+  border-radius: 20px;
+  border: 1px solid rgba(167, 139, 250, 0.25);
+  box-shadow: 0 15px 40px rgba(17, 22, 37, 0.35), 0 0 30px rgba(109, 63, 209, 0.12);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark-info-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 48px rgba(17, 22, 37, 0.4), 0 0 38px rgba(109, 63, 209, 0.22);
+  border-color: rgba(167, 139, 250, 0.45);
+}
+
+/* 2026 Light Dashboard Container */
+.light-dashboard-container {
+  background: #FFFFFF;
+  border: 1px solid rgba(229, 222, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 6px 24px -4px rgba(109, 63, 209, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.light-dashboard-container:hover {
+  border-color: rgba(196, 181, 253, 0.9);
+  box-shadow: 0 10px 30px -4px rgba(109, 63, 209, 0.06);
+}
+
+/* 2026 Light Dashboard Sub-Cards */
+.light-dashboard-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(235, 230, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(109, 63, 209, 0.03);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.light-dashboard-card:hover {
+  transform: translateY(-2px);
+  border-color: #C4B5FD;
+  box-shadow: 0 6px 18px rgba(109, 63, 209, 0.06);
+}
+
+/* Presentation Dark Contrast Badge */
+.presentation-dark-pill {
+  background: #111625;
+  color: #EDE9FE;
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  box-shadow: 0 2px 6px rgba(17, 22, 37, 0.2);
+}
+
+/* Color-Coded Category Badges */
+.badge-purple {
+  background: #F5F3FF;
+  color: #6D3FD1;
+  border: 1px solid #DDD6FE;
+}
+
+.badge-orange {
+  background: #FFF7ED;
+  color: #C2410C;
+  border: 1px solid #FFEDD5;
+}
+
+.badge-emerald {
+  background: #ECFDF5;
+  color: #047857;
+  border: 1px solid #A7F3D0;
+}
+
+.badge-blue {
+  background: #EFF6FF;
+  color: #1D4ED8;
+  border: 1px solid #BFDBFE;
+}
+
+/* Active Nav Indicator */
+.nav-link-active {
+  color: #6D3FD1 !important;
+  position: relative;
+}
+
+.nav-link-active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #6D3FD1;
+  border-radius: 2px;
+}
+
+/* Floating Abstract Wave SVG */
+.bg-wave-svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.85;
+}
+
+/* Compact Mobile-First Tweaks for Phones (<640px) */
+@media (max-width: 640px) {
+  .light-dashboard-container {
+    border-radius: 16px;
+    padding: 1rem !important;
+  }
+  .light-dashboard-card {
+    border-radius: 14px;
+    padding: 0.875rem !important;
+  }
+  .dark-info-card {
+    border-radius: 16px;
+    padding: 1rem !important;
+  }
+  .ambient-glow-purple, .ambient-glow-center {
+    width: 250px;
+    height: 250px;
+    filter: blur(50px);
+  }
+}
+
+/* Infinite One-Line Marquee Ticker Loop (Right to Left) */
+@keyframes tickerSlide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@-webkit-keyframes tickerSlide {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.ticker-container-wrap {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  position: relative !important;
+}
+
+.ticker-slide-track {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  width: max-content !important;
+  white-space: nowrap !important;
+  animation: tickerSlide 16s linear infinite !important;
+  -webkit-animation: tickerSlide 16s linear infinite !important;
+  will-change: transform;
+}
+
+.ticker-slide-track:hover,
+.ticker-slide-track:active {
+  animation-play-state: paused !important;
+  -webkit-animation-play-state: paused !important;
+}
+
+.ticker-item-pill {
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: #FFFFFF !important;
+    color: #111827 !important;
+  }
+  nav, button, .no-print, footer form {
+    display: none !important;
+  }
+}
