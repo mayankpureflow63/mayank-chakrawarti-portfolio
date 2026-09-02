@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #0A0F24;
+    color: #f3f4f6;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #040817;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #38bdf8;
+}
+
+/* Print Stylesheet for Resume PDF generation */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+
+  nav,
+  footer form,
+  button,
+  .no-print {
+    display: none !important;
+  }
+
+  .bg-black\/80,
+  .bg-slate-900\/90,
+  .bg-slate-900\/80,
+  .bg-slate-800 {
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    color: #111827 !important;
+    box-shadow: none !important;
+  }
+
+  .text-gray-100,
+  .text-gray-200,
+  .text-gray-300,
+  .text-gray-400 {
+    color: #1f2937 !important;
+  }
+
+  .text-cyan-400 {
+    color: #0284c7 !important;
+  }
+}
